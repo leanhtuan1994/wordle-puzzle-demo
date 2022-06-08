@@ -2,6 +2,7 @@ import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../common/extensions.dart';
 import '../../widgets/help_widget.dart';
 import '../../widgets/keyboard_widget.dart';
 import 'blocs/bloc/game_bloc.dart';
@@ -25,14 +26,14 @@ class _GameScreenState extends State<GameScreen> {
         shadowColor: Colors.transparent,
         automaticallyImplyLeading: false,
         title: Text(
-          'WORDLE',
+          context.l10n.gameTitle.toUpperCase(),
           style: context.headline3,
         ),
         actions: [
           IconButton(
             padding: const EdgeInsets.all(4.0),
             icon: const Icon(Icons.help_outline_outlined),
-            tooltip: "How to play",
+            tooltip: context.l10n.howToPlay,
             enableFeedback: false,
             onPressed: () {
               showHelpDialog(context: context);
@@ -41,7 +42,7 @@ class _GameScreenState extends State<GameScreen> {
           IconButton(
             padding: const EdgeInsets.all(4.0),
             icon: const Icon(Icons.refresh_rounded),
-            tooltip: "Reset game",
+            tooltip: context.l10n.resetGame,
             enableFeedback: false,
             onPressed: () {
               BlocProvider.of<GameBloc>(context).add(ResetNewGameEvent());

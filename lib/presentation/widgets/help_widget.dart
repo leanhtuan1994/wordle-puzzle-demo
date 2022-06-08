@@ -1,6 +1,7 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
+import '../../common/extensions.dart';
 import '../utils/type/input_type.dart';
 import 'keyboard_widget.dart';
 
@@ -53,7 +54,7 @@ Future<void> showHelpDialog({required BuildContext context}) {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 10),
                         child: Text(
-                          'HOW TO PLAY',
+                          context.l10n.howToPlay.toUpperCase(),
                           style: context.bodyText1,
                         ),
                       ),
@@ -67,20 +68,17 @@ Future<void> showHelpDialog({required BuildContext context}) {
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const _DecoratedTitleWidget(
-                                    title: "A Wordle Puzzle Game"),
-                                const _DecoratedPlainText(
-                                  text: "Guess the WORDLE in six tries",
+                                _DecoratedTitleWidget(
+                                    title: context.l10n.helpTitle),
+                                _DecoratedPlainText(
+                                  text: context.l10n.helpDesc1,
                                 ),
-                                const _DecoratedPlainText(
-                                  text:
-                                      "Each guess must be a valid five-letter word. Hit the enter button to submit",
-                                ),
-                                const _DecoratedPlainText(
-                                  text:
-                                      "After each guess, the color of the tiles will change to show how close your guess was to the word.",
-                                ),
-                                const _DecoratedTitleWidget(title: "Example"),
+                                _DecoratedPlainText(
+                                    text: context.l10n.helpDesc2),
+                                _DecoratedPlainText(
+                                    text: context.l10n.helpDesc3),
+                                _DecoratedTitleWidget(
+                                    title: context.l10n.example),
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 10.0),
@@ -104,10 +102,8 @@ Future<void> showHelpDialog({required BuildContext context}) {
                                     ],
                                   ),
                                 ),
-                                const _DecoratedPlainText(
-                                  text:
-                                      "The green tile shows that letter W is in the word and it's in the right spot.",
-                                ),
+                                _DecoratedPlainText(
+                                    text: context.l10n.exampleDesc1),
                                 Row(
                                   children: const [
                                     _DecoratedTextBox(
@@ -122,9 +118,8 @@ Future<void> showHelpDialog({required BuildContext context}) {
                                         letter: "L", state: InputState.absent),
                                   ],
                                 ),
-                                const _DecoratedPlainText(
-                                  text:
-                                      "The yellow tile shows that letter I is in the word but it's not in the right spot.",
+                                _DecoratedPlainText(
+                                  text: context.l10n.exampleDesc2,
                                 ),
                                 Row(
                                   children: const [
@@ -140,10 +135,8 @@ Future<void> showHelpDialog({required BuildContext context}) {
                                         letter: "E", state: InputState.absent),
                                   ],
                                 ),
-                                const _DecoratedPlainText(
-                                  text:
-                                      "A grey tile shows the letter is not in the word. For example, V, U, S are not in the word.",
-                                ),
+                                _DecoratedPlainText(
+                                    text: context.l10n.exampleDesc3),
                               ]),
                         ),
                       ),
@@ -154,7 +147,7 @@ Future<void> showHelpDialog({required BuildContext context}) {
                         padding: const EdgeInsets.all(10.0),
                         child: TextButton(
                           child: Text(
-                            'GOT IT!',
+                            context.l10n.gotIt..toUpperCase(),
                             style: context.bodyText1?.copyWith(
                               color: Colors.grey[850],
                             ),

@@ -9,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../common/base/base_stateful_widget.dart';
 import '../../../common/constants.dart';
+import '../../../common/extensions.dart';
 import '../../utils/game_mode.dart';
 import '../../utils/type/input_type.dart';
 import '../../widgets/keyboard_widget.dart';
@@ -90,7 +91,7 @@ class _GamePanelWidgetState extends BaseStatefulWidget<GamePanelWidget> {
       width: device.width > MAX_WIDTH ? MAX_WIDTH : null,
       body: Center(
         child: Text(
-          'LOSE, PLEASE TRY TO PLAY AGAIN',
+          context.l10n.lostGameContent,
           style: context.bodyText1,
         ),
       ),
@@ -102,7 +103,7 @@ class _GamePanelWidgetState extends BaseStatefulWidget<GamePanelWidget> {
       headerAnimationLoop: false,
       keyboardAware: false,
       dismissOnBackKeyPress: true,
-      btnOkText: 'NEW GAME',
+      btnOkText: context.l10n.newGame,
     )..show();
   }
 
@@ -115,7 +116,7 @@ class _GamePanelWidgetState extends BaseStatefulWidget<GamePanelWidget> {
       width: device.width > MAX_WIDTH ? MAX_WIDTH : null,
       body: Center(
         child: Text(
-          'WON',
+          context.l10n.won,
           style: context.bodyText1,
         ),
       ),
@@ -126,7 +127,7 @@ class _GamePanelWidgetState extends BaseStatefulWidget<GamePanelWidget> {
       headerAnimationLoop: false,
       keyboardAware: false,
       dismissOnBackKeyPress: true,
-      btnOkText: 'NEW GAME',
+      btnOkText: context.l10n.newGame,
     )..show();
   }
 }

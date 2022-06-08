@@ -1,4 +1,19 @@
 { 
     "@@locale": "en",
-    "hello": "Hello"
+    "hello": "Hello",
+    "lostGameContent": "LOST, PLEASE TRY TO PLAY AGAIN",
+    "newGame": "NEW GAME",
+    "won": "WON",
+    "gameTitle": "WORDLE",
+    "howToPlay": "How to play",
+    "resetGame": "Reset Game",
+    "helpTitle" : "A Wordle Puzzle Game",
+    "helpDesc1": "Guess the WORDLE in six tries",
+    "helpDesc2": "Each guess must be a valid five-letter word. Hit the enter button to submit",
+    "helpDesc3": "After each guess, the color of the tiles will change to show how close your guess was to the word.",
+    "example": "Example",
+    "exampleDesc1": "The green tile shows that letter W is in the word and it's in the right spot.",
+    "exampleDesc2": "The yellow tile shows that letter I is in the word but it's not in the right spot.",
+    "exampleDesc3": "A grey tile shows the letter is not in the word. For example, V, U, S are not in the word.",
+    "gotIt": "Got it!"
 }

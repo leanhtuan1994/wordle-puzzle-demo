@@ -22,6 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "hello": MessageLookupByLibrary.simpleMessage("Hello")
+        "example": MessageLookupByLibrary.simpleMessage("Example"),
+        "exampleDesc1": MessageLookupByLibrary.simpleMessage(
+            "The green tile shows that letter W is in the word and it\'s in the right spot."),
+        "exampleDesc2": MessageLookupByLibrary.simpleMessage(
+            "The yellow tile shows that letter I is in the word but it\'s not in the right spot."),
+        "exampleDesc3": MessageLookupByLibrary.simpleMessage(
+            "A grey tile shows the letter is not in the word. For example, V, U, S are not in the word."),
+        "gameTitle": MessageLookupByLibrary.simpleMessage("WORDLE"),
+        "gotIt": MessageLookupByLibrary.simpleMessage("Got it!"),
+        "hello": MessageLookupByLibrary.simpleMessage("Hello"),
+        "helpDesc1": MessageLookupByLibrary.simpleMessage(
+            "Guess the WORDLE in six tries"),
+        "helpDesc2": MessageLookupByLibrary.simpleMessage(
+            "Each guess must be a valid five-letter word. Hit the enter button to submit"),
+        "helpDesc3": MessageLookupByLibrary.simpleMessage(
+            "After each guess, the color of the tiles will change to show how close your guess was to the word."),
+        "helpTitle":
+            MessageLookupByLibrary.simpleMessage("A Wordle Puzzle Game"),
+        "howToPlay": MessageLookupByLibrary.simpleMessage("How to play"),
+        "lostGameContent": MessageLookupByLibrary.simpleMessage(
+            "LOST, PLEASE TRY TO PLAY AGAIN"),
+        "newGame": MessageLookupByLibrary.simpleMessage("NEW GAME"),
+        "resetGame": MessageLookupByLibrary.simpleMessage("Reset Game"),
+        "won": MessageLookupByLibrary.simpleMessage("WON")
       };
 }
