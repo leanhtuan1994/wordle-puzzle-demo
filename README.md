@@ -10,11 +10,11 @@ Each guess must be a valid five-letter word. Hit the enter button to submit.
 
 After each guess, the color of the tiles will change to show how close your guess was to the word.
 
-<img src="https://github.com/leanhtuan1994/wordle-puzzle-demo/blob/master/images/demo-1.png" width="200" height="421"/>
-<br/>
-<img src="https://github.com/leanhtuan1994/wordle-puzzle-demo/blob/master/images/demo-2.png" width="200" height="421"/>
-<br/>
-<img src="https://github.com/leanhtuan1994/wordle-puzzle-demo/blob/master/images/demo-3.png" width="200" height="421"/>
+<p lign="center">
+<img src="https://github.com/leanhtuan1994/wordle-puzzle-demo/blob/master/images/demo-1.png" width="32%" />
+<img src="https://github.com/leanhtuan1994/wordle-puzzle-demo/blob/master/images/demo-2.png" width="32%" />
+<img src="https://github.com/leanhtuan1994/wordle-puzzle-demo/blob/master/images/demo-3.png" width="32%" />
+</p>
 
 ## Play on Web
 Visit [WEB DEMO](https://wordle-puzzle-demo.web.app/) to play the online version
