@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:collection/collection.dart';
-import 'package:english_words/english_words.dart' as words;
+//import 'package:english_words/english_words.dart' as words;
 import 'package:equatable/equatable.dart';
 
 import '../../../../../data/models/guess_daily_result/guess_daily_result.dart';
@@ -38,14 +38,15 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     if (event.guess.length != WORD_LEN) return;
 
     try {
-      final checkWord = words.all.contains(event.guess.toLowerCase());
+      //! need find better solution for word check
+      // final checkWord = words.all.contains(event.guess.toLowerCase());
 
-      if (!checkWord) {
-        emit(state.copyWith(
-          status: CheckState.mismatched,
-        ));
-        return;
-      }
+      // if (!checkWord) {
+      //   emit(state.copyWith(
+      //     status: CheckState.mismatched,
+      //   ));
+      //   return;
+      // }
 
       emit(state.copyWith(
         status: CheckState.loading,
