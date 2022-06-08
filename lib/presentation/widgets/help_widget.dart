@@ -147,7 +147,7 @@ Future<void> showHelpDialog({required BuildContext context}) {
                         padding: const EdgeInsets.all(10.0),
                         child: TextButton(
                           child: Text(
-                            context.l10n.gotIt..toUpperCase(),
+                            context.l10n.gotIt.toUpperCase(),
                             style: context.bodyText1?.copyWith(
                               color: Colors.grey[850],
                             ),
