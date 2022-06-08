@@ -209,6 +209,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Info`
+  String get info {
+    return Intl.message(
+      'Info',
+      name: 'info',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not a word, please try again!`
+  String get notWordContent {
+    return Intl.message(
+      'Not a word, please try again!',
+      name: 'notWordContent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OK`
+  String get ok {
+    return Intl.message(
+      'OK',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

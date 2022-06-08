@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:collection/collection.dart';
+import 'package:english_words/english_words.dart' as words;
 import 'package:equatable/equatable.dart';
 
 import '../../../../../data/models/guess_daily_result/guess_daily_result.dart';
@@ -19,6 +20,13 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     on<InputEvent>(_handleInputEvent);
     on<VerifyGuessEvent>(_verifyGuessEvent);
     on<ResetNewGameEvent>(_onResetGameEvent);
+    on<ResetCheckStateEvent>(_onResetCheckState);
+  }
+
+  void _onResetCheckState(ResetCheckStateEvent event, Emitter<GameState> emit) {
+    emit(state.copyWith(
+      status: CheckState.idle,
+    ));
   }
 
   void _onResetGameEvent(ResetNewGameEvent event, Emitter<GameState> emit) {
@@ -27,7 +35,18 @@ class GameBloc extends Bloc<GameEvent, GameState> {
 
   void _verifyGuessEvent(
       VerifyGuessEvent event, Emitter<GameState> emit) async {
+    if (event.guess.length != WORD_LEN) return;
+
     try {
+      final checkWord = words.all.contains(event.guess.toLowerCase());
+
+      if (!checkWord) {
+        emit(state.copyWith(
+          status: CheckState.mismatched,
+        ));
+        return;
+      }
+
       emit(state.copyWith(
         status: CheckState.loading,
       ));

@@ -1,6 +1,6 @@
 part of 'game_bloc.dart';
 
-enum CheckState { idle, loading, success, failure }
+enum CheckState { idle, loading, success, failure, mismatched }
 
 class GameState extends Equatable {
   const GameState({

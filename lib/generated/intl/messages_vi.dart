@@ -41,9 +41,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "helpTitle":
             MessageLookupByLibrary.simpleMessage("A Wordle Puzzle Game"),
         "howToPlay": MessageLookupByLibrary.simpleMessage("How to play"),
+        "info": MessageLookupByLibrary.simpleMessage("Info"),
         "lostGameContent": MessageLookupByLibrary.simpleMessage(
             "LOST, PLEASE TRY TO PLAY AGAIN"),
         "newGame": MessageLookupByLibrary.simpleMessage("NEW GAME"),
+        "notWordContent": MessageLookupByLibrary.simpleMessage(
+            "Not a word, please try again!"),
+        "ok": MessageLookupByLibrary.simpleMessage("OK"),
         "resetGame": MessageLookupByLibrary.simpleMessage("Reset Game"),
         "won": MessageLookupByLibrary.simpleMessage("WON")
       };

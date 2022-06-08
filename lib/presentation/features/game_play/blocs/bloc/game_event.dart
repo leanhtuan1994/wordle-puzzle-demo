@@ -19,9 +19,12 @@ class InputEvent extends GameEvent {
 
 class VerifyGuessEvent extends GameEvent {
   final String guess;
+
   const VerifyGuessEvent({
     required this.guess,
   });
 }
 
 class ResetNewGameEvent extends GameEvent {}
+
+class ResetCheckStateEvent extends GameEvent {}

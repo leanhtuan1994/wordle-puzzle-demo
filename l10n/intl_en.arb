@@ -15,5 +15,8 @@
     "exampleDesc1": "The green tile shows that letter W is in the word and it's in the right spot.",
     "exampleDesc2": "The yellow tile shows that letter I is in the word but it's not in the right spot.",
     "exampleDesc3": "A grey tile shows the letter is not in the word. For example, V, U, S are not in the word.",
-    "gotIt": "Got it!"
+    "gotIt": "Got it!",
+    "info": "Info",
+    "notWordContent" :"Not a word, please try again!",
+    "ok": "OK"
 }

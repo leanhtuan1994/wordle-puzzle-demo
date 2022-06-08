@@ -39,6 +39,9 @@ class _GamePanelWidgetState extends BaseStatefulWidget<GamePanelWidget> {
                 showLoading();
               } else {
                 hideLoading();
+                if (state.status == CheckState.mismatched) {
+                  _showNotWordDialog();
+                }
               }
 
               if (state.isWin) {
@@ -80,6 +83,26 @@ class _GamePanelWidgetState extends BaseStatefulWidget<GamePanelWidget> {
         ),
       ),
     );
+  }
+
+  Future _showNotWordDialog() {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(context.l10n.info),
+          content: Text(context.l10n.notWordContent),
+          actions: [
+            TextButton(
+              child: Text(context.l10n.ok),
+              onPressed: () => Navigator.of(context).pop(),
+            )
+          ],
+        );
+      },
+    ).then((_) {
+      _bloc.add(ResetCheckStateEvent());
+    });
   }
 
   void _showLostDialog() {
