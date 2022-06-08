@@ -111,11 +111,14 @@ class _GamePanelWidgetState extends BaseStatefulWidget<GamePanelWidget> {
       animType: AnimType.BOTTOMSLIDE,
       dialogType: DialogType.ERROR,
       bodyHeaderDistance: 42,
-      width: device.width > MAX_WIDTH ? MAX_WIDTH : null,
-      body: Center(
-        child: Text(
-          context.l10n.lostGameContent,
-          style: context.bodyText1,
+      width: device.width > MAX_WIDTH ? MAX_WIDTH - 120 : null,
+      body: SizedBox(
+        height: 80,
+        child: Center(
+          child: Text(
+            context.l10n.lostGameContent,
+            style: context.bodyText1,
+          ),
         ),
       ),
       btnOkOnPress: () {
@@ -136,11 +139,14 @@ class _GamePanelWidgetState extends BaseStatefulWidget<GamePanelWidget> {
       animType: AnimType.BOTTOMSLIDE,
       dialogType: DialogType.SUCCES,
       bodyHeaderDistance: 42,
-      width: device.width > MAX_WIDTH ? MAX_WIDTH : null,
-      body: Center(
-        child: Text(
-          context.l10n.won,
-          style: context.bodyText1,
+      width: device.width > MAX_WIDTH ? MAX_WIDTH - 12 : null,
+      body: SizedBox(
+        height: 80,
+        child: Center(
+          child: Text(
+            context.l10n.won,
+            style: context.bodyText1,
+          ),
         ),
       ),
       btnOkOnPress: () {
